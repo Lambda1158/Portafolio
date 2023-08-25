@@ -7,7 +7,7 @@ export default function RootLayout({ children }) {
  return (
     <html lang="en">
         <head>
-          <title>My first page with next js</title>
+          <title>My own handmade portafolio!!</title>
         </head>
       <body>{children}</body>
     </html>
