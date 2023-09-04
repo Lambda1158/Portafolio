@@ -1,9 +1,8 @@
 import Link from "next/link";
-
-export default function ContactoPage() {
+export default function Contacto() {
   return (
     <div>
-      Este es el contacto
+      projectos
       <Link href={"/"}>Take me back</Link>
     </div>
   );

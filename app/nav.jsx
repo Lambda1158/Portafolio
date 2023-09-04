@@ -8,9 +8,9 @@ const links = [
 
 export default function NavPage() {
   return (
-    <div className="margin-auto">
+    <div className=" h-10">
       <nav>
-        <ul className="">
+        <ul className=" flex flex-col align-middle">
           {links.map((e) => {
             return (
               <li className="pr-2" key={e.href}>

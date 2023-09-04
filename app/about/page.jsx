@@ -1,9 +1,8 @@
 import Link from "next/link";
-
-export default function AboutPage() {
+export default function About() {
   return (
     <div>
-      Este es el about
+      projectos
       <Link href={"/"}>Take me back</Link>
     </div>
   );
