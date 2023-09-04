@@ -1,12 +1,12 @@
+import Link from "next/link";
 import Landing from "./landing";
-import NavPage from "./nav";
 
 
 export default function Home() {
   return (
-    <div className="bg-gray-600 text-clip font-semibold h-screen text-2xl">
+    <div className=" bg-light-1 text-clip font-semibold h-screen text-2xl">
       <Landing/>
-      <NavPage/>
+      <Link href="/nav" ><span className="mr-1 text-5xl hover:text-white hover:line-through">Menu</span></Link>
     </div>
   )
 }

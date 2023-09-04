@@ -24,6 +24,7 @@ export default function NavPage() {
           })}
         </ul>
       </nav>
+      <div><Link href="/">Menu</Link></div>
     </div>
   );
 }
