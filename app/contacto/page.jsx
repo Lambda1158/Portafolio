@@ -1,9 +1,15 @@
 import Link from "next/link";
 export default function Contacto() {
   return (
-    <div className="noSelect inline-block text-[18px] sm:text-[25px] text-white hover:line-through cursor-pointer uppercase absolute right-10 top 0">
-      projectos
-      <Link href={"/"}>Take me back</Link>
+    <div className=" text-[18px] text-white bg-purple-dark-1 h-screen border-[5px] border-white">
+      <h1 className="text-8xl text-center my-[100px]">Contacto</h1>
+      <div className="text-center my-[100px]">
+        <Link href="/nav">
+          <button class="bg-purple-dark-2 hover:bg-purple-light-1 hover:font-semibold text-white font-bold py-2 px-4 border-b-4 border-purple-light-2 hover:border-purple-light-1 rounded">
+            Take me Back
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }

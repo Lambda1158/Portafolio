@@ -9,7 +9,7 @@ const links = [
 
 export default function NavPage() {
   return (
-    <div className=" h-screen bg-purple-dark-2 text-white pt-[120px] pl-[30px] sm:pt-[90px] sm:pl-[60px]">
+    <div className=" h-screen bg-purple-dark-2 text-white pt-[120px] pl-[30px] sm:pt-[90px] sm:pl-[60px] border-8 border-white">
       <ul className=" inline-flex flex-col">
         {links.map((e) => {
           return (

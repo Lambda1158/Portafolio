@@ -4,14 +4,11 @@ import TextItem from "./nav/TextItem";
 
 export default function Home() {
   return (
-    <body
-      className="
-    font-notoSans bg-purple-dark-2 text-white  overflow-x-hidden
-    scrollbar-thumb-red-900 scrollbar-track-red-100
+    <div
+      className="bg-purple-dark-2 text-white border-[5px] border-white overflow-hidden h-screen
     "
     >
-      <Landing />
-      <div className=" ml">
+      <div className="border-[5px] border-white py-10">
         <Link href="/nav">
           <TextItem
             text="Menu"
@@ -22,6 +19,9 @@ export default function Home() {
           />
         </Link>
       </div>
-    </body>
+      <div className="mx-auto h-screen px-5 flex items-center border-5 border-white">
+        <Landing />
+      </div>
+    </div>
   );
 }
