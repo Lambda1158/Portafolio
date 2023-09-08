@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Header from "../components/header/header";
+import Animated from "../motiondiv/animated";
+
 export default function About() {
   return (
     <section className="bg-background">
@@ -9,7 +11,10 @@ export default function About() {
       >
         <Header />
         <div className="mx-auto h-screen px-5 border-white">
-          <h1 className="text-8xl text-center">About me</h1>
+          <Animated
+            contenido={<h1 className="text-8xl text-center">About me</h1>}
+          />
+
           <Link href="/projects">
             <button className="inline-block font-semibold tracking-[1px] text-[14px] x text-magenta hover:text-letra uppercase py-[12px] px-[32px] uppercase]  bg-letra hover:bg-magenta mt-[15px] xl:mt-[30px] transition duration-100">
               Projects
