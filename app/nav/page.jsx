@@ -1,15 +1,16 @@
 import Link from "next/link";
 import TextItem from "./TextItem";
+import MenuLanding from "../components/menu";
 
 const links = [
   { href: "/about", text: "About" },
-  { href: "/proyectos", text: "Proyects" },
-  { href: "/contacto", text: "Contact" },
+  { href: "/projects", text: "Projects" },
+  { href: "/contact", text: "Contact" },
 ];
 
 export default function NavPage() {
   return (
-    <div className=" h-screen bg-purple-dark-2 text-white pt-[120px] pl-[30px] sm:pt-[90px] sm:pl-[60px] border-8 border-white">
+    <div className=" h-screen bg-background text-letra pt-[120px] pl-[30px] sm:pt-[90px] sm:pl-[60px] border-8 border-white">
       <ul className=" inline-flex flex-col">
         {links.map((e) => {
           return (
@@ -19,7 +20,7 @@ export default function NavPage() {
                   text={e.text}
                   value={1.05}
                   tail={
-                    "noSelect text-[50px] leading-[0.9] font-normal hover:font-semibold hover:line-through uppercase inline-block text-white mb-[25px] "
+                    "noSelect text-[50px] leading-[0.9] font-normal hover:font-semibold hover:line-through uppercase inline-block text-letra mb-[25px] "
                   }
                 />
               </Link>
@@ -27,15 +28,11 @@ export default function NavPage() {
           );
         })}
       </ul>
-      <Link href="/">
-        <TextItem
-          text="menu"
-          value={1.05}
-          tail={
-            "noSelect inline-block text-[18px] sm:text-[25px] text-white hover:line-through cursor-pointer uppercase absolute right-10 top 0"
-          }
-        />
-      </Link>
+      <div className=" absolute top-[100px] left-[90%]">
+        <Link href="/">
+          <MenuLanding />
+        </Link>
+      </div>
     </div>
   );
 }
