@@ -18,6 +18,9 @@ module.exports = {
         "magenta":"#FF3FA4",
         "crema":"#FF9B82",
 
+      },
+      screens:{
+        'sm': {"min":"401px"},
       }
     },
   },

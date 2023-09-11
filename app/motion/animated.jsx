@@ -5,7 +5,7 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { x: -100 },
+  hidden: { x: -200 },
   visible: { x: 0, transition: { delay: 0.5, duration: 0.5 } },
 };
 
