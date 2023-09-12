@@ -9,6 +9,7 @@ function PageTransition({ children, ...rest }) {
 
   return (
     <motion.div
+      key={children}
       className="bg-crema"
       initial={onTheRight}
       animate={inTheCenter}
