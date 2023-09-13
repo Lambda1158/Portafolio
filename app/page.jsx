@@ -1,5 +1,6 @@
 import Landing from "./landing";
 import Header from "./components/header/header";
+import TextAnimation from "./motion/textAnimated";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       <div className=" mx-auto max-w-[1285px] px-3 overflow-hidden h-screen">
         <Header />
         <div className="mx-auto py-10 h-screen px-5">
-          <Landing />
+          <TextAnimation text={<Landing />} />
         </div>
       </div>
     </section>

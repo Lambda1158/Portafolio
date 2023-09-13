@@ -9,7 +9,7 @@ export default function Projects() {
       <PageTransition>
         <section className="bg-background">
           <div
-            className=" mx-auto max-w-[1285px] px-3 text-white border-[5px] border-white overflow-hidden h-screen
+            className=" mx-auto max-w-[1285px] px-3 text-white overflow-hidden h-screen
 "
           >
             <Header />
