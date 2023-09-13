@@ -1,21 +1,15 @@
-"use client";
 import Landing from "./landing";
 import Header from "./components/header/header";
-import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <section className="bg-background">
-      <motion.div
-        className=" mx-auto max-w-[1285px] px-3 overflow-hidden h-screen"
-        animate={{ x: 100 }}
-        transition={{ delay: 0.2, stiffness: 10 }}
-      >
+      <div className=" mx-auto max-w-[1285px] px-3 overflow-hidden h-screen">
         <Header />
-        <div className="mx-auto h-screen px-5">
+        <div className="mx-auto py-10 h-screen px-5">
           <Landing />
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

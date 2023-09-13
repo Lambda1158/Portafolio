@@ -14,11 +14,10 @@ const HomeA = () => {
       whileTap={{ scale: 0.9 }}
       onClick={navegate}
       drag
-      dragConstraints={{
-        top: -50,
-        left: -50,
-        right: 50,
-        bottom: 50,
+      dragTransition={{
+        min: 0,
+        max: 100,
+        bounceStiffness: 100,
       }}
     >
       C

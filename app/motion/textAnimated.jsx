@@ -4,12 +4,9 @@ const TextAnimation = ({ text }) => {
   return (
     <div>
       <motion.div
-        style={{
-          opacity: 0,
-          x: -20, // Mueve el texto hacia la izquierda para que parezca que se está escribiendo
-          display: "inline-block",
-        }}
-        initial={false}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 3 } }}
+        transition={{}}
       >
         {text}
       </motion.div>
