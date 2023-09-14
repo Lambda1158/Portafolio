@@ -5,7 +5,7 @@ import Header from "../components/header/header";
 import PageTransition from "../motion/pageTransition";
 export default function Projects() {
   return (
-    <div className="bg-letra">
+    <div key="project" className="bg-letra">
       <PageTransition>
         <section className="bg-background">
           <div

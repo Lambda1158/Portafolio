@@ -5,7 +5,7 @@ const TextAnimation = ({ text }) => {
     <div>
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 3 } }}
+        animate={{ opacity: 1, transition: { duration: 3, x: -100 } }}
         transition={{}}
       >
         {text}

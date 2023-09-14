@@ -6,7 +6,7 @@ import PageTransition from "../motion/pageTransition";
 
 export default function Contacto() {
   return (
-    <div className="bg-letra">
+    <div key="contact" className="bg-letra">
       <PageTransition>
         <section className="bg-background" key="/contacto">
           <div className=" mx-auto max-w-[1285px] px-3 text-letra overflow-hidden h-scree ">

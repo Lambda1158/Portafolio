@@ -9,9 +9,9 @@ export default function Landing() {
             Bruce Herrera Wayne
           </h1>
           <p className=" font-medium leading-[140%] text-[20px] md:text-[30px]  xl:text-[30px] t-screen:text-[42px] text-crema uppercase">
-            I &apos;m a Full-Stack Web Developer looking for my first IT job,
-            currently i &apos;m studying at UTN FRM and working as
-            administrative at SUOES
+            I&apos;m a Full-Stack Web Developer looking for my first IT job,
+            currently i&apos;m studying at UTN FRM and working as administrative
+            at SUOES
           </p>
           <span className="inline-block font-medium leading-[128%] text-[16px] md:text-[18px] xl:text-[24px] text-crema mt-[5px] xl:mt-[15px]">
             Based in Mendoza, Argentina
