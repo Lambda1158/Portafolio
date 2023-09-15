@@ -3,6 +3,8 @@ import Link from "next/link";
 import Header from "../components/header/header";
 import Animated from "../motion/animated";
 import PageTransition from "../motion/pageTransition";
+import ItemAbout from "./about";
+import TextAnimation from "../motion/textAnimated";
 import { AnimatePresence } from "framer-motion";
 export default function About() {
   return (
@@ -22,6 +24,7 @@ export default function About() {
                     Projects
                   </button>
                 </Link>
+                <TextAnimation text={<ItemAbout />} />
               </div>
             </div>
           </section>
