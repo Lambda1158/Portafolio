@@ -1,12 +1,27 @@
 "use client";
-import { motion } from "framer-motion";
+import { useAnimation, motion } from "framer-motion";
+import { useEffect } from "react";
 const TextAnimation = ({ text }) => {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start({
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 2, // Duración de la animación
+        type: "spring", // Tipo de animación
+        stiffness: 30, // Rigidez de la animación
+      },
+    });
+  }, [controls]);
+
   return (
-    <div>
+    <div className="container">
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 3, x: -100 } }}
-        transition={{}}
+        className="text"
+        initial={{ opacity: 0, x: 100 }}
+        animate={controls}
       >
         {text}
       </motion.div>

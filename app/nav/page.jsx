@@ -22,10 +22,11 @@ export default function NavPage() {
           <ul className=" pl-[70px] pt-[50px] inline-flex flex-col sm:left-0">
             {links.map((e) => {
               return (
-                <AnimatePresence>
+                <AnimatePresence key={e.href}>
                   <li className="inline-block" key={e.href}>
                     <Link href={e.href}>
                       <TextItem
+                        key={e.href}
                         text={e.text}
                         value={1.05}
                         tail={

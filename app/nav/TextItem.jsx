@@ -1,8 +1,10 @@
-"use client"
-import { motion } from 'framer-motion';
-const TextItem = ({text,value,tail}) => {
+"use client";
+import { motion } from "framer-motion";
+const TextItem = ({ key, text, value, tail }) => {
   return (
-    <motion.span className={tail}
+    <motion.span
+      key={key}
+      className={tail}
       whileHover={{ scale: value }}
       whileTap={{ scale: 0.9 }}
     >
