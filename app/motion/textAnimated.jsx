@@ -1,7 +1,7 @@
 "use client";
 import { useAnimation, motion } from "framer-motion";
 import { useEffect } from "react";
-const TextAnimation = ({ text }) => {
+const TextAnimation = ({ children }) => {
   const controls = useAnimation();
 
   useEffect(() => {
@@ -12,20 +12,17 @@ const TextAnimation = ({ text }) => {
         duration: 2, // Duración de la animación
         type: "spring", // Tipo de animación
         stiffness: 30, // Rigidez de la animación
+        delay: 0.6,
       },
     });
   }, [controls]);
 
   return (
-    <div className="container">
-      <motion.div
-        className="text"
-        initial={{ opacity: 0, x: 100 }}
-        animate={controls}
-      >
-        {text}
+    <>
+      <motion.div initial={{ opacity: 0, x: 300 }} animate={controls}>
+        {children}
       </motion.div>
-    </div>
+    </>
   );
 };
 
