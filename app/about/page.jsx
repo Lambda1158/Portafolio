@@ -19,9 +19,15 @@ export default function About() {
             <div className=" mx-auto max-w-[1285px]  px-5 py-3 text-white overflow-hidden">
               <Header />
               <TextAnimation text={<Aboutme />} />
-              <Scroll children={<Experience />} />
-              <Scroll children={<Education />} />
-              <Scroll children={<Skill />} />
+              <Scroll>
+                <Experience />
+              </Scroll>
+              <Scroll>
+                <Education />
+              </Scroll>
+              <Scroll>
+                <Skill />
+              </Scroll>
             </div>
           </section>
         </PageTransition>
