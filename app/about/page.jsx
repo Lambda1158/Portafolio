@@ -6,7 +6,7 @@ import TextAnimation from "../motion/textAnimated";
 import { AnimatePresence } from "framer-motion";
 import Experience from "./experience";
 import Scroll from "../motion/scroll";
-import Skill from "./skill";
+import Habilidades from "./skill";
 import Education from "./education";
 import Footer from "./footer";
 
@@ -26,7 +26,7 @@ export default function About() {
                 <Education />
               </Scroll>
               <Scroll>
-                <Skill />
+                <Habilidades />
               </Scroll>
             </div>
           </section>
