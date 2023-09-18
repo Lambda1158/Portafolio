@@ -3,19 +3,19 @@ import Link from "next/link";
 import Mi from "../../public/myself.jpg";
 const Aboutme = () => {
   return (
-    <section id="about-section" className=" py-10">
-      <h1 className="p-7 text-letra text-4xl sm:text-7xl  font-semibold ">
+    <section id="about-section" className=" py-7 mb-0 sm:mb-20">
+      <h1 className=" mx-8 sm:mx-0  py-10 text-letra text-5xl sm:text-7xl  font-semibold ">
         Back-end Lover, Full-Stack Capable
       </h1>
-      <div className=" p-5 flex flex-col sm:flex-row justify-between sm:grid-cols-1">
+      <div className=" py-8 flex flex-col sm:flex-row justify-between sm:grid-cols-1">
         <Image
-          className=" rounded-md sm:rounded-full"
+          className=" rounded-md sm:rounded-full mx-8 sm:mx-0"
           src={Mi}
           alt="yo"
           width={300} // Ancho deseado de la imagen en píxeles
           height={200} // Alto deseado de la imagen en píxeles
         />
-        <div className=" p-8">
+        <div className="mx-8 sm:mx-0 mt-5 sm:mt-0">
           <p className="text-letra font-semibold text-1xl sm:text-2xl">
             HELLO I‘M BRUNO HERRERA, I PAY GREAT ATTENTION TO DETAIL IN THE
             DESIGN AND DEVELOPMENT OF THE PROJECTS. MY PLAN IS TO DEVELOP MY

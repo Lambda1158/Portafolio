@@ -9,7 +9,7 @@ const Item = ({ title, content }) => {
 
 const Habilidades = () => {
   return (
-    <section id="experience-section" className=" text-letra">
+    <section id="experience-section" className="mx-8 sm:mx-0 text-letra">
       <h1 className=" py-3 text-5xl sm:text-7xl font-semibold">Skills</h1>
       <Item title={"Languages"} content={"Javascript | Java | Python | C++"} />
       <Item title={"Languages"} content={"Javascript | Java | Python | C++"} />
