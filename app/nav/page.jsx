@@ -26,7 +26,6 @@ export default function NavPage() {
                   <li className="inline-block" key={e.href}>
                     <Link href={e.href}>
                       <TextItem
-                        key={e.href}
                         text={e.text}
                         value={1.05}
                         tail={

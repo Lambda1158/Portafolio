@@ -9,7 +9,6 @@ function PageTransition({ children, ...rest }) {
 
   return (
     <motion.div
-      key={children}
       initial={onTheLeft}
       animate={inTheCenter}
       exit={onTheRight}
