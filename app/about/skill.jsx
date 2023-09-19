@@ -1,8 +1,8 @@
 const Item = ({ title, content }) => {
   return (
     <>
-      <h2 className=" py-5 font-bold text-3xl sm:text-5xl">{title}</h2>
-      <p className=" py-2 font-bold text-1xl sm:text-3xl">{content}</p>
+      <h2 className=" py-2 sm:py-5 font-bold text-3xl sm:text-5xl">{title}</h2>
+      <p className=" py-0 sm:py-2 font-bold text-1xl sm:text-3xl">{content}</p>
     </>
   );
 };

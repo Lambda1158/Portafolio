@@ -8,6 +8,7 @@ import Scroll from "../motion/scroll";
 import Habilidades from "./skill";
 import Education from "./education";
 import Footer from "./footer";
+import Icons from "./icons";
 
 export default function About() {
   return (
@@ -29,6 +30,7 @@ export default function About() {
               <Habilidades />
             </Scroll>
           </div>
+          <Icons></Icons>
         </section>
       </PageTransition>
       <Footer />
