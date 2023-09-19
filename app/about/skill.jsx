@@ -24,8 +24,8 @@ const Habilidades = () => {
   return (
     <section id="experience-section" className="mx-8 sm:mx-0 text-letra">
       <h1 className=" py-3 text-5xl sm:text-7xl font-semibold">Skills</h1>
-      {contenido.map((e) => (
-        <Item title={e.title} content={e.content} />
+      {contenido.map((e, index) => (
+        <Item key={index} title={e.title} content={e.content} />
       ))}
     </section>
   );
