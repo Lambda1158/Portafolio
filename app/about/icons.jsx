@@ -1,3 +1,4 @@
+"use client";
 import { FaReact, FaGithub, FaNodeJs } from "react-icons/fa";
 import {
   SiRedux,
@@ -13,11 +14,7 @@ import {
   SiNestjs,
 } from "react-icons/si";
 import { TbBrandFramerMotion, TbBrandVscode } from "react-icons/tb";
-import TextAnimation from "../motion/textAnimated";
-import { useRef } from "react";
-import { useInView } from "react-intersection-observer";
-import { delay, motion } from "framer-motion";
-
+import { motion } from "framer-motion";
 const Items = [
   FaReact,
   SiNextdotjs,
@@ -40,31 +37,28 @@ const Items1 = [
 ];
 
 export default function Icons() {
-  const { ref, inView } = useInView({
-    threshold: 0.1, // Ajusta este valor según tus necesidades
-  });
-  const scrollRef = useRef(null);
   return (
-    <section id="icons" className="mx-auto max-w-[1285px]">
-      <div ref={scrollRef} className="  flex flex-wrap flex-row justify-evenly">
+    <section id="icons" className=" mx-auto max-w-[1285px]">
+      <div className="  flex flex-wrap flex-row justify-evenly">
         {Items.map((Icon, index) => (
-          <motion.div
+          <Icon
             key={index}
-            animate={inView ? { x: 0, opacity: 1 } : { x: 300, opacity: 0 }}
-            ref={ref}
-          >
-            <Icon className=" text-gray-900 hover:grayscale-0 text-7xl hover:shadow-md" />
-          </motion.div>
+            className=" text-gray-900 hover:grayscale-0 text-7xl hover:shadow-md"
+          ></Icon>
         ))}
       </div>
-      <div ref={scrollRef} className="  flex flex-wrap flex-row justify-evenly">
+      <div className="  flex flex-wrap flex-row justify-evenly">
         {Items1.map((Icon, index) => (
           <motion.div
             key={index}
-            animate={inView ? { x: 0, opacity: 1 } : { x: 300, opacity: 0 }}
-            ref={ref}
+            initial={{ opacity: 0 }} // Opacidad inicial en 0
+            animate={{ opacity: 1 }} // Opacidad animada en 1 cuando esté en vista
+            transition={{ delay: index * 0.2 }} // Retraso para la animación
           >
-            <Icon className=" text-gray-900 hover:grayscale-0 text-7xl hover:shadow-md" />
+            <Icon
+              key={index}
+              className=" text-gray-900 hover:grayscale-0 text-7xl hover:shadow-md"
+            />
           </motion.div>
         ))}
       </div>
