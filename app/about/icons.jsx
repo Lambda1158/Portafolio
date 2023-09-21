@@ -24,8 +24,6 @@ const Items = [
   SiBootstrap,
   SiMysql,
   SiPostgresql,
-];
-const Items1 = [
   TbBrandFramerMotion,
   TbBrandVscode,
   FaNodeJs,
@@ -35,31 +33,17 @@ const Items1 = [
   SiHtml5,
   SiCss3,
 ];
+const Items1 = [];
 
 export default function Icons() {
   return (
     <section id="icons" className=" mx-auto max-w-[1285px]">
-      <div className="  flex flex-wrap flex-row justify-evenly">
+      <div className="  flex justify-start items-center flex-wrap gap-[60px] mt-[170px]">
         {Items.map((Icon, index) => (
           <Icon
             key={index}
-            className=" text-gray-900 hover:grayscale-0 text-7xl hover:shadow-md"
-          ></Icon>
-        ))}
-      </div>
-      <div className="  flex flex-wrap flex-row justify-evenly">
-        {Items1.map((Icon, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0 }} // Opacidad inicial en 0
-            animate={{ opacity: 1 }} // Opacidad animada en 1 cuando esté en vista
-            transition={{ delay: index * 0.2 }} // Retraso para la animación
-          >
-            <Icon
-              key={index}
-              className=" text-gray-900 hover:grayscale-0 text-7xl hover:shadow-md"
-            />
-          </motion.div>
+            className=" text-gray-900 hover:grayscale-0 text-8xl hover:shadow-md"
+          />
         ))}
       </div>
     </section>
