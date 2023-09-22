@@ -4,7 +4,7 @@ import Mi from "../../public/myself.jpg";
 const Aboutme = () => {
   return (
     <section id="about-section" className=" py-7 mb-0 sm:mb-20 ">
-      <h1 className=" mx-8 sm:mx-0  py-10 text-letra text-5xl sm:text-7xl  font-semibold ">
+      <h1 className=" mx-8 sm:mx-0  py-10 text-letra text-5xl sm:text-7xl  font-semibold hover:scale-105 transform transition-transform duration-300 ease-in-out  ">
         Back-end Lover, Full-Stack Capable
       </h1>
       <div className=" py-8 flex flex-col sm:flex-row justify-between sm:grid-cols-1">
@@ -25,7 +25,7 @@ const Aboutme = () => {
             REACH OUT TO ME ON MY SOCIALS.
           </p>
           <Link href="/projects">
-            <button className="inline-block font-semibold tracking-[1px] text-[20px] x text-magenta hover:text-letra uppercase py-4 px-[32px] uppercase]  bg-letra hover:bg-magenta mt-[15px] xl:mt-[30px] transition duration-100">
+            <button className="hover:scale-110 transform  inline-block font-semibold tracking-[1px] text-[20px] x text-magenta hover:text-letra uppercase py-4 px-[32px] uppercase]  bg-letra hover:bg-magenta mt-[15px] xl:mt-[30px] transition duration-100">
               Projects
             </button>
           </Link>

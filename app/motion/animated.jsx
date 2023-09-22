@@ -11,7 +11,7 @@ const itemVariants = {
 
 import { motion } from "framer-motion";
 
-const Animated = ({ contenido }) => {
+const Animated = ({ children }) => {
   return (
     <>
       <motion.div
@@ -20,7 +20,7 @@ const Animated = ({ contenido }) => {
         variants={containerVariants}
       >
         <motion.div initial="hidden" animate="visible" variants={itemVariants}>
-          {contenido}
+          {children}
         </motion.div>
       </motion.div>
     </>

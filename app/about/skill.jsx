@@ -1,7 +1,9 @@
 const Item = ({ title, content }) => {
   return (
     <>
-      <h2 className=" py-2 sm:py-5 font-bold text-3xl sm:text-5xl">{title}</h2>
+      <h2 className=" py-2 sm:py-5 font-bold text-3xl sm:text-5xl hover:scale-x-95 transform transition-transform duration-300 ease-in-out">
+        {title}
+      </h2>
       <p className=" py-0 sm:py-2 font-bold text-1xl sm:text-3xl">{content}</p>
     </>
   );
@@ -23,7 +25,9 @@ const contenido = [
 const Habilidades = () => {
   return (
     <section id="experience-section" className="mx-8 sm:mx-0 text-letra">
-      <h1 className=" py-3 text-5xl sm:text-7xl font-semibold">Skills</h1>
+      <h1 className=" py-3 text-5xl sm:text-7xl font-semibold hover:scale-x-95 transform transition-transform duration-300 ease-in-out">
+        Skills
+      </h1>
       {contenido.map((e, index) => (
         <Item key={index} title={e.title} content={e.content} />
       ))}

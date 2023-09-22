@@ -14,7 +14,6 @@ import {
   SiNestjs,
 } from "react-icons/si";
 import { TbBrandFramerMotion, TbBrandVscode } from "react-icons/tb";
-import { motion } from "framer-motion";
 const Items = [
   FaReact,
   SiNextdotjs,

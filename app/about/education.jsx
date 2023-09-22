@@ -1,7 +1,9 @@
 const Education = () => {
   return (
     <section id="experience-section" className=" mx-8 sm:mx-0 text-letra">
-      <h1 className="font-semibold py-2 text-5xl sm:text-7xl ">Educacion</h1>
+      <h1 className="font-semibold py-2 text-5xl sm:text-7xl hover:scale-x-95 transform transition-transform duration-300 ease-in-out ">
+        Educacion
+      </h1>
       <h2 className=" font-medium py-1 sm:py-3 text-1xl sm:text-3xl">
         Secundario | Esc. de Comercio Martin Zapata orientacion Informatica.
       </h2>
