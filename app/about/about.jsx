@@ -9,11 +9,12 @@ const Aboutme = () => {
       </h1>
       <div className=" py-8 flex flex-col sm:flex-row justify-between sm:grid-cols-1">
         <Image
-          className=" rounded-md sm:rounded-full mx-8 sm:mx-0"
+          className=" rounded-md sm:rounded-full mx-8 sm:mx-0 hover:scale-110 transform transition-transform duration-300 ease-in-out"
           src={Mi}
           alt="yo"
           width={300} // Ancho deseado de la imagen en píxeles
-          height={200} // Alto deseado de la imagen en píxeles
+          placeholder="blur"
+          //blurDataURL={"/img/logo.png"}
         />
         <div className="mx-8 sm:mx-10 mt-5 sm:mt-0">
           <p className="text-letra font-semibold text-1xl sm:text-2xl">

@@ -29,10 +29,10 @@ export default function About() {
             <Scroll>
               <Habilidades />
             </Scroll>
+            <Scroll>
+              <Icons />
+            </Scroll>
           </div>
-          <Scroll>
-            <Icons />
-          </Scroll>
         </section>
       </PageTransition>
       <Footer />

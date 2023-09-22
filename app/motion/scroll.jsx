@@ -7,7 +7,7 @@ function Scroll({ children }) {
   });
   const scrollRef = useRef(null);
   return (
-    <div ref={scrollRef} className=" py-[60px] sm:py-[100px]">
+    <div ref={scrollRef} className=" overflow-hidden py-[60px] sm:py-[100px]">
       <motion.div
         initial={{ x: 300, opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : { x: 300, opacity: 0 }}

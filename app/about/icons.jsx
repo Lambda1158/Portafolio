@@ -37,12 +37,12 @@ const Items1 = [];
 
 export default function Icons() {
   return (
-    <section id="icons" className=" mx-auto max-w-[1285px]">
-      <div className="  flex justify-start items-center flex-wrap gap-[60px] mt-[170px]">
+    <section id="icons" className=" mx-8 sm:mx-0 ">
+      <div className="  flex justify-start items-center flex-wrap gap-[60px]">
         {Items.map((Icon, index) => (
           <Icon
             key={index}
-            className=" text-gray-900 hover:grayscale-0 text-8xl hover:shadow-md"
+            className=" text-gray-900 hover:grayscale-0 text-8xl  hover:scale-150 transform transition-transform duration-300 ease-in-out"
           />
         ))}
       </div>
