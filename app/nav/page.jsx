@@ -56,7 +56,7 @@ export default function NavPage() {
         </ul>
       </Animated>
 
-      <span className="  sm:top-[50px] absolute left-10 top-10  sm:right-10 cursor-pointer">
+      <span className="  sm:top-[50px] absolute left-10 top-10  sm:left-[80%] cursor-pointer">
         <Link href="/">
           <MenuLanding />
         </Link>
