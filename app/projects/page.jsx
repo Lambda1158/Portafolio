@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import Card from "./card";
 import Header from "../components/header/header";
 
 import PageTransition from "../motion/pageTransition";
@@ -9,17 +9,20 @@ export default function Projects() {
       <PageTransition>
         <section className="bg-background">
           <div
-            className=" mx-auto max-w-[1285px] px-3 text-white overflow-hidden h-screen
+            className=" mx-auto max-w-[1285px] px-5 pb-24
 "
           >
             <Header />
             <div className="mx-auto h-screen px-5 border-white">
-              <h1 className="text-8xl text-center">My Projects</h1>
-              <Link href="/nav">
-                <button className="bg-magenta hover:bg-purple-light-1 hover:font-semibold text-white font-bold py-2 px-4 border-b-4 border-purple-light-2 hover:border-purple-light-1 rounded">
-                  Take me Back
-                </button>
-              </Link>
+              <h1 className=" py-6 text-7xl text-left text-letra font-medium">
+                Learning Projects
+              </h1>
+              <div className="grid gap-x-[20px] gap-y-[20px] grid-cols-1 sm:grid-cols-2">
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+              </div>
             </div>
           </div>
         </section>

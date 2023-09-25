@@ -21,7 +21,11 @@ module.exports = {
       },
       screens:{
         'sm': "640px"
-      }
+      },
+      scale: {
+        '140': '1.4',
+        "130":"1.3"
+      },
     },
   },
   plugins: [],
