@@ -12,30 +12,28 @@ import Icons from "./icons";
 
 export default function About() {
   return (
-    <div className="bg-letra" key="aboutpage">
-      <PageTransition>
-        <section className="bg-background">
-          <div className=" mx-auto max-w-[1285px]  px-5 py-3 text-white overflow-hidden">
-            <Header />
-            <TextAnimation>
-              <Aboutme />
-            </TextAnimation>
-            <Scroll>
-              <Experience />
-            </Scroll>
-            <Scroll>
-              <Education />
-            </Scroll>
-            <Scroll>
-              <Habilidades />
-            </Scroll>
-            <Scroll>
-              <Icons />
-            </Scroll>
-          </div>
-        </section>
-      </PageTransition>
+    <PageTransition>
+      <section className="bg-background">
+        <div className=" mx-auto max-w-[1285px]  px-5 py-3 text-white overflow-hidden">
+          <Header />
+          <TextAnimation>
+            <Aboutme />
+          </TextAnimation>
+          <Scroll>
+            <Experience />
+          </Scroll>
+          <Scroll>
+            <Education />
+          </Scroll>
+          <Scroll>
+            <Habilidades />
+          </Scroll>
+          <Scroll>
+            <Icons />
+          </Scroll>
+        </div>
+      </section>
       <Footer />
-    </div>
+    </PageTransition>
   );
 }
