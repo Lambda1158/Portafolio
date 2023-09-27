@@ -1,15 +1,20 @@
+"use client";
 import Image from "next/image";
 import { FaChevronDown } from "react-icons/fa";
 import Boton from "./boton";
 import { FaGithub, FaGlobe } from "react-icons/fa";
+import { useEffect, useState } from "react";
 function Modal1({ isOpen, onClose, img }) {
-  isOpen
-    ? (document.body.style.overflow = "hidden")
-    : (document.body.style.overflow = "unset");
+  useEffect(() => {
+    isOpen
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "unset");
+  }, []);
+
   if (!isOpen) return null;
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 bottom-0 z-50 bg-crema bg-opacity-80 h-full w-full "></div>
+      <div className="fixed top-0 left-0 right-0 bottom-0 z-50 bg-crema bg-opacity-80 h-screen w-screen "></div>
       <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 p-3 max-w-[1333px] w-full border-[3px] border-white">
         <div className="">
           <div className="relative px-[20px] lg:px-[35px] pt-[70px] lg:pt-[52px] pb-[35px] rounded-[2px] bg-[#1F1F1D] dark:bg-[#D8D9CF]">
