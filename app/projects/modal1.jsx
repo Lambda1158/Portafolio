@@ -3,13 +3,11 @@ import Image from "next/image";
 import { FaChevronDown } from "react-icons/fa";
 import Boton from "./boton";
 import { FaGithub, FaGlobe } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 function Modal1({ isOpen, onClose, img }) {
   useEffect(() => {
-    isOpen
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "unset");
-  }, []);
+    document.body.style.overflow = isOpen ? "hidden" : "unset";
+  }, [isOpen]);
 
   if (!isOpen) return null;
   return (
