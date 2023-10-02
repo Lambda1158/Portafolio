@@ -7,15 +7,15 @@ const Form = () => {
   const [Form, setForm] = useState({});
   return (
     <div className=" rounded-[50px] text-letra shadow-2xl ">
-      <div className="flex sm:flex-row flex-col justify-around gap-12  py-5 ">
-        <div className="  rounded-[15px] w-[450px] h-[150px] p-[24px] shadow-2xl ">
+      <div className=" mx-10 flex sm:flex-row flex-col justify-around gap-12  py-5 ">
+        <div className="  rounded-[15px]  h-[150px] p-[24px] shadow-2xl ">
           <SiGmail className="  hover:scale-150 transform transition-transform duration-300 ease-in-out mx-auto text-4xl"></SiGmail>
-          <p className="text-letra text-xl text-center  font-light py-2 ">
+          <p className="text-letra  text-center  font-light py-2 ">
             brunoherrera118@gmail.com
           </p>
           <p className=" text-center opacity-80">Email me</p>
         </div>
-        <div className="  rounded-[15px] w-[450px] h-[150px] p-[24px] shadow-2xl ">
+        <div className="  rounded-[15px]  h-[150px] p-[24px] shadow-2xl ">
           <SiGooglecalendar className="  hover:scale-150 transform transition-transform duration-300 ease-in-out mx-auto text-5xl"></SiGooglecalendar>
           <p className="text-letra text-xl text-center  font-light py-2 ">
             Calendly
@@ -26,7 +26,7 @@ const Form = () => {
       <div>
         <h1 className=" text-3xl px-8 font-light ">Contact Form</h1>
         <form>
-          <div className=" mx-14 flex flex-col sm:flex-row justify-around py-5">
+          <div className=" mx-14  flex flex-col gap-5 gm:flex-row justify-between  py-5">
             <Input
               type={"text"}
               id={"nombre"}

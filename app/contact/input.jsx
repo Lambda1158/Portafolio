@@ -1,7 +1,7 @@
 const Input = ({ type, id, name, placeholder }) => {
   return (
     <input
-      className=" w-3/4 h-14  text-2xl bg-letra text-background  rounded-[4px] placeholder:text-background placeholder:font-bold placeholder:px-5"
+      className=" h-14  text-2xl bg-letra text-background  rounded-[4px] placeholder:text-background placeholder:font-bold placeholder:px-5"
       type={type}
       id={id}
       name={name}
