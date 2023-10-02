@@ -9,7 +9,7 @@ export default function Contacto() {
     <div key="contact" className="bg-letra">
       <PageTransition>
         <section className="bg-background" key="/contacto">
-          <div className=" mx-auto max-w-[1285px] px-3 text-letra overflow-hidden h-scree ">
+          <div className=" mx-auto max-w-[1285px] px-3 text-letra h-full ">
             <Header />
             <div className="mx-auto h-screen px-5">
               <h1 className=" indent-6 decoration-8 text-left border-b-4 border-b-letra text-4xl font-light inline-block">
