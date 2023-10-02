@@ -20,7 +20,8 @@ module.exports = {
 
       },
       screens:{
-        'sm': "640px"
+        'sm': "640px",
+        "lm":"1020px"
       },
       scale: {
         '140': '1.4',

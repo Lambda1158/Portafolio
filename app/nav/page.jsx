@@ -9,7 +9,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaTwitter,
-  FaTwitch,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 const links = [
@@ -25,7 +25,10 @@ const fa = [
     href: "https://www.linkedin.com/in/bruno-herrera-aa10b6201/",
   },
   { name: FaTwitter, href: "https://www.twitter.com" },
-  { name: FaTwitch, href: "https://www.twitch.com" },
+  {
+    name: FaWhatsapp,
+    href: "https://wa.me/5492615457609?text=Hola,%20estoy%20interesado%20en%20contactarte",
+  },
 ];
 
 export default function NavPage() {

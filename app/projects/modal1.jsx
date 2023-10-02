@@ -16,7 +16,7 @@ function Modal1({ isOpen, onClose, img }) {
       <div className="fixed top-0 left-0 right-0 z-50 bg-crema bg-opacity-[90%] dark:bg-opacity-[80%] h-full w-full "></div>
       <div className="fixed z-50 top-1/2 left-[50%] p-3  max-w-[1333px] max-h-full w-full transform  translate-y-[-50%] translate-x-[-50%] ">
         <div
-          className="overflow-y-scroll t-screen:overflow-y-hidden"
+          className="overflow-y-scroll lm:overflow-y-hidden "
           style={{ maxHeight: "calc(100vh - 50px)" }}
         >
           <div className="relative px-[20px] pt-[70px] pb-[35px]  rounded-[5px] bg-background">
