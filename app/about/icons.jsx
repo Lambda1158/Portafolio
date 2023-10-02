@@ -41,7 +41,7 @@ export default function Icons() {
         {Items.map((Icon, index) => (
           <Icon
             key={index}
-            className=" text-gray-900 hover:grayscale-0 text-8xl  hover:scale-150 transform transition-transform duration-300 ease-in-out"
+            className=" text-gray-900 hover:grayscale-0 text-7xl sm:text-8xl  hover:scale-150 transform transition-transform duration-300 ease-in-out"
           />
         ))}
       </div>
