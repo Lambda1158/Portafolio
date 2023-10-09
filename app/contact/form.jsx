@@ -4,7 +4,22 @@ import { useState } from "react";
 import { SiGmail, SiGooglecalendar } from "react-icons/si";
 
 const Form = () => {
-  const [Form, setForm] = useState({});
+  const [input1, setInput1] = useState({
+    nombre: "",
+    email: "",
+    asunto: "",
+    mensaje: "",
+  });
+  const handleChange = (e) => {
+    e.preventDefault();
+    setInput1({
+      ...input1,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className=" rounded-[50px] text-letra shadow-2xl ">
       <div className=" mx-10 flex sm:flex-row flex-col justify-around gap-12  py-5 ">
@@ -32,12 +47,16 @@ const Form = () => {
               id={"nombre"}
               name={"nombre"}
               placeholder={"Your Name*"}
+              value={input1.name}
+              onChange={handleChange}
             />
             <Input
               type={"email"}
               id={"email"}
               name={"email"}
               placeholder={"Your Email*"}
+              value={input1.mail}
+              onChange={handleChange}
             />
           </div>
           <div className="flex flex-col gap-5 mx-14">
@@ -47,6 +66,8 @@ const Form = () => {
               id={"asunto"}
               name={"asunto"}
               placeholder={"Subject*"}
+              value={input1.subject}
+              onChange={handleChange}
             />
 
             <textarea
@@ -55,12 +76,15 @@ const Form = () => {
               name="mensaje"
               rows="2"
               required
+              value={input1.message}
               placeholder="Your Message*"
+              onChange={handleChange}
             ></textarea>
           </div>
           <div className="text-center py-4">
             <button
               type="submit"
+              onClick={handleOnSubmit}
               className=" font-semibold tracking-[1px] text-[18px] x text-magenta hover:text-letra uppercase py-[10px] px-[32px] rounded-[5px]  bg-letra hover:bg-magenta mt-[15px] xl:mt-[30px] transition duration-100"
             >
               SEND
