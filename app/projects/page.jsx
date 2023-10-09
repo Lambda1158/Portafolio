@@ -6,13 +6,14 @@ import PageTransition from "../motion/pageTransition";
 import Footer from "../about/footer";
 import Example from "../../public/imagen-muestra.webp";
 import { useState } from "react";
+import Wrapper from "../components/wrapper";
 export default function Projects() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   return (
     <>
-      <PageTransition>
+      <Wrapper>
         <section className="bg-background">
           <div className=" mx-auto max-w-[1285px] px-5 pb-24">
             <Header />
@@ -30,7 +31,7 @@ export default function Projects() {
           </div>
           <Footer />
         </section>
-      </PageTransition>
+      </Wrapper>
       <Modal1 img={Example} isOpen={isModalOpen} onClose={closeModal} />
     </>
   );

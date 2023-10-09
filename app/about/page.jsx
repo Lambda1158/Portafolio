@@ -9,11 +9,11 @@ import Habilidades from "./skill";
 import Education from "./education";
 import Footer from "./footer";
 import Icons from "./icons";
-
+import Wrapper from "../components/wrapper";
 export default function About() {
   return (
-    <PageTransition>
-      <section className="bg-background">
+    <Wrapper>
+      <section key="about" className="bg-background">
         <div className=" mx-auto max-w-[1285px]  px-5 py-3 text-white overflow-hidden">
           <Header />
           <TextAnimation>
@@ -34,6 +34,6 @@ export default function About() {
         </div>
       </section>
       <Footer />
-    </PageTransition>
+    </Wrapper>
   );
 }
