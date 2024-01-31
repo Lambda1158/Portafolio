@@ -5,7 +5,7 @@ import Boton from "./boton";
 import { FaGithub, FaGlobe } from "react-icons/fa";
 import { useEffect } from "react";
 import Carousel from "./carousel";
-function Modal1({ isOpen, onClose, img }) {
+function Modal1({ isOpen, onClose, data, type }) {
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "unset";
   }, [isOpen]);
@@ -27,16 +27,13 @@ function Modal1({ isOpen, onClose, img }) {
               <FaChevronDown />
             </button>
             <div className="flex justify-between items-starts gap-[25px] flex-wrap lg:flex-nowrap">
-              <Image src={img} alt="altimage" />
+              <Image src={data[type]?.image[0]} alt="altimage" width={600} />
               <div>
                 <h1 className=" text-letra text-5xl font-light">
-                  Project name
+                  {data[type].title}
                 </h1>
                 <p className=" py-10 text-letra text-2xl font-light">
-                  VERSION 2 OF MY PORTFOLIO IS A STATIC WEBSITE BUILT WITH NEXT
-                  JS 13 AND TAILWIND CSS WITH FRAMER MOTION. I REALLY LIKE DOING
-                  THIS BECAUSE THE MINIMAL DESIGN AND THE DARK MODE IS REALLY
-                  COOL.
+                  {data[type].description}
                 </p>
                 <div className=" text-center sm:text-left">
                   <Boton Icon={FaGithub} />
@@ -45,7 +42,7 @@ function Modal1({ isOpen, onClose, img }) {
               </div>
             </div>
             <div className="border-t-[3px]  border-t-letra border-opacity-[80%] outline-none my-[30px] "></div>
-            <Carousel />
+            <Carousel data={data[type]} />
           </div>
         </div>
       </div>
