@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 const ImageModal = ({ src, alt, onClose }) => (
-  <div className=" absolute mt-0 ml-0" onClick={onClose}>
+  <div className=" fixed top-0 p-[40px]" onClick={onClose}>
     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
       <img src={src} alt={alt} className="modal-image" onClick={onClose} />
     </div>
