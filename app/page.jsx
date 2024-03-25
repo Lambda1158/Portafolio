@@ -9,7 +9,7 @@ export default function Home() {
       <section key="home" className="bg-background">
         <div className=" mx-auto max-w-[1285px] px-3 overflow-hidden h-screen">
           <Header />
-          <div className="mx-auto py-10 h-screen px-5">
+          <div className="mx-auto py-10 px-5">
             <TextAnimation>
               <Landing />
             </TextAnimation>

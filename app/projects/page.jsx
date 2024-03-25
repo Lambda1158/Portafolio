@@ -31,8 +31,8 @@ export default function Projects() {
   return (
     <>
       <Wrapper>
-        <section className="bg-background">
-          <div className=" mx-auto max-w-[1285px] px-5 pb-24">
+        <section className="bg-background ">
+          <div className=" mx-auto max-w-[1285px] px-5 pb-24 gm:h-auto gm:w-auto">
             <Header />
             <h1 className=" py-7 text-5xl sm:text-7xl text-left text-letra font-normal hover:scale-95 transform transition-transform duration-300 ease-in-out">
               Learning Projects

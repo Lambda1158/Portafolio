@@ -3,7 +3,7 @@ export default function Landing() {
   return (
     <section className="text-letra text-6xl font-semibold">
       <h1 className="font-roboto font-extrabold leading-[90%]  text-[60px] md:text-[50px] xl:text-[120px] uppercase tracking-[2px]">
-        Bruce Herrera Wayne
+        Bruno Javier Herrera
       </h1>
       <p className=" font-medium leading-[140%] text-[20px] md:text-[30px]  xl:text-[30px] t-screen:text-[42px] text-crema uppercase">
         I&apos;m a Full-Stack Web Developer looking for my first IT job,
