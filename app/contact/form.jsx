@@ -1,14 +1,18 @@
 "use client";
-import Input from "./input";
 import { useState } from "react";
 import { SiGmail, SiGooglecalendar } from "react-icons/si";
+import { sendContactForm } from "@/lib/api";
 
 const Form = () => {
+  const [stateButton, setStateButton] = useState({
+    loading: false,
+    send: false,
+  });
   const [input1, setInput1] = useState({
-    nombre: "",
-    email: "",
-    asunto: "",
-    mensaje: "",
+    name: "",
+    mail: "",
+    subject: "",
+    message: "",
   });
   const handleChange = (e) => {
     e.preventDefault();
@@ -19,11 +23,24 @@ const Form = () => {
   };
   const handleOnSubmit = async (e) => {
     e.preventDefault();
-    fetch("/api/hello")
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.error("Error:", error));
-    alert("click boton");
+    setStateButton({ ...stateButton, loading: true });
+    if (!input1.name || !input1.subject || !input1.mail || !input1.message) {
+      setStateButton({ ...stateButton, loading: false });
+      return alert("debe llenar el formulario primero");
+    }
+    fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(input1),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    }).then((res) => {
+      setInput1({ ...input1, name: "", mail: "", subject: "", message: "" });
+      setStateButton({ ...stateButton, send: true, loading: false });
+      if (!res.ok) throw new Error("Failed to send the mail");
+      return res.json();
+    });
   };
   return (
     <div className=" rounded-[50px] text-letra shadow-2xl  ">
@@ -49,22 +66,24 @@ const Form = () => {
         <h1 className=" text-3xl mx-14 underline underline-offset-8 py-6 font-light ">
           Contact Form
         </h1>
-        <form>
+        <form onSubmit={handleOnSubmit}>
           <div className=" mx-14  flex flex-col gap-5 gm:flex-row justify-between  py-5">
-            <Input
+            <input
+              className=" h-14 text-2xl pl-4 bg-letra text-background  rounded-[4px] placeholder:text-background placeholder:font-medium placeholder:px-5"
               required
               type={"text"}
               id={"nombre"}
-              name={"nombre"}
+              name={"name"}
               placeholder={"Your Name*"}
               value={input1.name}
               onChange={handleChange}
             />
-            <Input
+            <input
+              className=" h-14 text-2xl pl-4 bg-letra text-background  rounded-[4px] placeholder:text-background placeholder:font-medium placeholder:px-5"
               required
               type={"email"}
               id={"email"}
-              name={"email"}
+              name={"mail"}
               placeholder={"Your Email*"}
               value={input1.mail}
               onChange={handleChange}
@@ -72,19 +91,19 @@ const Form = () => {
           </div>
           <div className="flex flex-col gap-5 mx-14">
             <input
-              className=" h-14 text-2xl bg-letra text-background  rounded-[4px] placeholder:text-background placeholder:font-bold placeholder:px-5"
+              className=" h-14 text-2xl pl-4 bg-letra text-background  rounded-[4px] placeholder:text-background placeholder:font-medium placeholder:px-5"
               type={"text"}
               id={"asunto"}
-              name={"asunto"}
+              name={"subject"}
               placeholder={"Subject*"}
               value={input1.subject}
               onChange={handleChange}
             />
 
             <textarea
-              className=" h-14 rounded-[4px] placeholder:text-2xl placeholder:px-5  bg-letra text-background placeholder:text-background placeholder:font-bold"
+              className=" h-14 pl-4 rounded-[4px] placeholder:text-2xl text-2xl placeholder:px-5 py-2 bg-letra text-background placeholder:text-background placeholder:font-medium"
               id="mensaje"
-              name="mensaje"
+              name="message"
               rows="3"
               required
               value={input1.message}
@@ -93,14 +112,19 @@ const Form = () => {
             ></textarea>
           </div>
           <div className="text-center py-4">
-            <button
-              type="submit"
-              disabled={false}
-              onClick={handleOnSubmit}
-              className="  font-semibold tracking-[1px] text-[18px] x text-magenta hover:text-letra uppercase py-[10px] px-[32px] rounded-[5px]  bg-letra hover:bg-magenta mt-[15px] xl:mt-[30px] transition duration-100"
-            >
-              SEND
-            </button>
+            {stateButton.loading && <p>algo q muestra que carga</p>}
+
+            {!stateButton.send ? (
+              <button
+                type="submit"
+                onClick={handleOnSubmit}
+                className=" font-semibold  tracking-[1px] text-2xl 	 text-magenta hover:text-letra py-[10px] px-[32px] rounded-[5px]  bg-letra hover:bg-magenta mt-[15px] xl:mt-[30px] hover:scale-105 transition duration-100"
+              >
+                Send
+              </button>
+            ) : (
+              <p className=" font-light text-2xl p-2">E-mail sent</p>
+            )}
           </div>
         </form>
       </div>
