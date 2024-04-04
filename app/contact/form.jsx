@@ -51,7 +51,7 @@ const Form = () => {
   };
   return (
     <div className=" rounded-[50px] text-letra shadow-2xl  ">
-      <div className=" mx-10 flex gm:flex-row flex-col justify-around gap-12  py-5 ">
+      <div className=" mx-10 flex gm:flex-row flex-col justify-around gap-12  py-4 ">
         <div className="  rounded-[15px]  h-[150px] p-[24px] shadow-2xl ">
           <SiGmail className="  hover:scale-150 transform transition-transform duration-300 ease-in-out mx-auto text-4xl"></SiGmail>
           <p className="text-letra  text-center  font-light py-2 ">
@@ -76,7 +76,7 @@ const Form = () => {
         <form onSubmit={handleOnSubmit}>
           <div className=" mx-14  flex flex-col gap-5 gm:flex-row justify-between  py-5">
             <input
-              className=" h-14 text-2xl pl-4 bg-letra text-background  rounded-[4px] placeholder:text-background placeholder:font-medium placeholder:px-5"
+              className=" h-12 text-2xl pl-4 bg-letra text-background  rounded-[4px] placeholder:text-background placeholder:font-medium placeholder:px-5"
               required
               type={"text"}
               id={"nombre"}
@@ -86,7 +86,7 @@ const Form = () => {
               onChange={handleChange}
             />
             <input
-              className=" h-14 text-2xl pl-4 bg-letra text-background  rounded-[4px] placeholder:text-background placeholder:font-medium placeholder:px-5"
+              className=" h-12 text-2xl pl-4 bg-letra text-background  rounded-[4px] placeholder:text-background placeholder:font-medium placeholder:px-5"
               required
               type={"email"}
               id={"email"}
@@ -98,7 +98,7 @@ const Form = () => {
           </div>
           <div className="flex flex-col gap-5 mx-14">
             <input
-              className=" h-14 text-2xl pl-4 bg-letra text-background  rounded-[4px] placeholder:text-background placeholder:font-medium placeholder:px-5"
+              className=" h-12 text-2xl pl-4 bg-letra text-background  rounded-[4px] placeholder:text-background placeholder:font-medium placeholder:px-5"
               type={"text"}
               id={"asunto"}
               name={"subject"}
@@ -108,7 +108,7 @@ const Form = () => {
             />
 
             <textarea
-              className=" h-14 pl-4 rounded-[4px] placeholder:text-2xl text-2xl placeholder:px-5 py-2 bg-letra text-background placeholder:text-background placeholder:font-medium"
+              className=" h-12 pl-4 rounded-[4px] placeholder:text-2xl text-2xl placeholder:px-5 py-2 bg-letra text-background placeholder:text-background placeholder:font-medium"
               id="mensaje"
               name="message"
               rows="3"
@@ -122,7 +122,7 @@ const Form = () => {
             className={stateButton.load ? "ml-[47%] py-4" : "text-center py-4"}
           >
             <Toaster
-              position="top-right"
+              position="bottom-right"
               reverseOrder={false}
               toastOptions={{
                 duration: 2000,
@@ -154,9 +154,9 @@ const Form = () => {
                 <button
                   type="submit"
                   onClick={handleOnSubmit}
-                  className=" font-semibold  tracking-[1px] text-2xl 	 text-magenta hover:text-letra py-[10px] px-[32px] rounded-[5px]  bg-letra hover:bg-magenta mt-[15px] xl:mt-[10px] hover:scale-105 transition duration-100"
+                  className=" font-semibold  tracking-[1px] text-1xl 	 text-magenta hover:text-letra py-[10px] px-[32px] rounded-[5px]  bg-letra hover:bg-magenta mt-[15px] xl:mt-[10px] hover:scale-105 transition duration-100"
                 >
-                  Send
+                  SEND
                 </button>
               )
             ) : (

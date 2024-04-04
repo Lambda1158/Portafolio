@@ -2,12 +2,13 @@
 import Header from "../components/header/header";
 import Form from "./form";
 import Wrapper from "../components/wrapper";
+import Footer from "../about/footer";
 
 export default function Contacto() {
   return (
     <Wrapper>
-      <section className="bg-background " key="/contacto">
-        <div className=" mx-auto max-w-[1285px]  px-5 py-3 overflow-auto text-letra h-screen">
+      <section className="bg-background  min-h-screen " key="/contacto">
+        <div className=" mx-auto max-w-[1285px]  px-4 text-letra mb-6 ">
           <Header />
           <div className=" px-5 h-auto">
             <h1 className=" indent-6 decoration-8 text-left border-b-4 border-b-letra text-4xl font-light inline-block">
@@ -17,9 +18,10 @@ export default function Contacto() {
               If you want to know more about me or my work, send me a message.
               I&apos;d love to hear from you.
             </p>
-            <Form></Form>
+            <Form />
           </div>
         </div>
+        <Footer />
       </section>
     </Wrapper>
   );

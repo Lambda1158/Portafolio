@@ -29,7 +29,7 @@ const handler = async (req, res) => {
         subject: body.subject,
         ...htmlContenido(body),
       });
-      return res.status(200).json({ message: "succes" });
+      return res.status(200).json({ message: "success" });
     } catch (error) {
       console.log(error.message);
       return res.status(400).json({ message: error.message });

@@ -8,7 +8,7 @@ const Experience = () => {
         Suoes Administrative
       </h3>
       <ol className=" font-medium text-1xl sm:text-3xl">
-        Administrative | Precential | Feb 2022 - Currently
+        Administrative | Precential | Feb 2022 - Mar 2024
         <li>
           Seguimiendo y gestion de deuda sobre aportes sindicales y de obra
           social para con la empresa SOES y OSTES.
