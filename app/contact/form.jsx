@@ -1,11 +1,12 @@
 "use client";
 import { useState } from "react";
 import { SiGmail, SiGooglecalendar } from "react-icons/si";
-import { sendContactForm } from "@/lib/api";
-
+import { Oval } from "react-loader-spinner";
+import toast, { Toaster } from "react-hot-toast";
+const ToastError = (e) => toast.error(e);
 const Form = () => {
   const [stateButton, setStateButton] = useState({
-    loading: false,
+    load: false,
     send: false,
   });
   const [input1, setInput1] = useState({
@@ -21,25 +22,31 @@ const Form = () => {
       [e.target.name]: e.target.value,
     });
   };
-  const handleOnSubmit = async (e) => {
-    e.preventDefault();
-    setStateButton({ ...stateButton, loading: true });
-    if (!input1.name || !input1.subject || !input1.mail || !input1.message) {
-      setStateButton({ ...stateButton, loading: false });
-      return alert("debe llenar el formulario primero");
-    }
+  const FetchFun = (input) =>
     fetch("/api/contact", {
       method: "POST",
-      body: JSON.stringify(input1),
+      body: JSON.stringify(input),
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
     }).then((res) => {
       setInput1({ ...input1, name: "", mail: "", subject: "", message: "" });
-      setStateButton({ ...stateButton, send: true, loading: false });
+      setStateButton((state) => ({ ...state, send: true, load: false }));
       if (!res.ok) throw new Error("Failed to send the mail");
       return res.json();
+    });
+  const handleOnSubmit = async (e) => {
+    e.preventDefault();
+    setStateButton((prev) => ({ ...prev, load: true }));
+    if (!input1.name || !input1.subject || !input1.mail || !input1.message) {
+      setStateButton({ ...stateButton, load: false });
+      return ToastError("Fill the form before sending");
+    }
+    toast.promise(FetchFun(input1), {
+      loading: "Process",
+      error: "Could not send E-mail",
+      success: "E-mail Sent",
     });
   };
   return (
@@ -111,17 +118,47 @@ const Form = () => {
               onChange={handleChange}
             ></textarea>
           </div>
-          <div className="text-center py-4">
-            {stateButton.loading && <p>algo q muestra que carga</p>}
-
+          <div
+            className={stateButton.load ? "ml-[47%] py-4" : "text-center py-4"}
+          >
+            <Toaster
+              position="top-right"
+              reverseOrder={false}
+              toastOptions={{
+                duration: 2000,
+                style: {
+                  background: "#363636",
+                  color: "#fff",
+                },
+                error: {
+                  duration: 1500,
+                  theme: {
+                    primary: "green",
+                    secondary: "black",
+                  },
+                },
+              }}
+            />
             {!stateButton.send ? (
-              <button
-                type="submit"
-                onClick={handleOnSubmit}
-                className=" font-semibold  tracking-[1px] text-2xl 	 text-magenta hover:text-letra py-[10px] px-[32px] rounded-[5px]  bg-letra hover:bg-magenta mt-[15px] xl:mt-[30px] hover:scale-105 transition duration-100"
-              >
-                Send
-              </button>
+              stateButton.load ? (
+                <Oval
+                  visible={stateButton.load}
+                  height="70"
+                  width="70"
+                  color={"#FFC8C8"}
+                  secondaryColor="#FFC8C8"
+                  ariaLabel="oval-loading"
+                  wrapperClass="margin-left:50%"
+                />
+              ) : (
+                <button
+                  type="submit"
+                  onClick={handleOnSubmit}
+                  className=" font-semibold  tracking-[1px] text-2xl 	 text-magenta hover:text-letra py-[10px] px-[32px] rounded-[5px]  bg-letra hover:bg-magenta mt-[15px] xl:mt-[10px] hover:scale-105 transition duration-100"
+                >
+                  Send
+                </button>
+              )
             ) : (
               <p className=" font-light text-2xl p-2">E-mail sent</p>
             )}
