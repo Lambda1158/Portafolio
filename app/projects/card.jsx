@@ -4,8 +4,8 @@ import { FaGithub, FaGlobe } from "react-icons/fa";
 const Card = ({ openModal, data }) => {
   return (
     <>
-      <div className="relative w-[600px]">
-        <Image src={data?.image[0]} alt="alt" width={600} />
+      <div className="relative">
+        <Image src={data?.image[0]} alt="alt" />
 
         <button
           onClick={() => openModal(data)}
