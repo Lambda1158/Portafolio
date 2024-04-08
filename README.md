@@ -31,9 +31,9 @@ _Este proyecto está bajo la licencia MIT._
 
 ## **Imagenes**
 
-![Imagen 1](./public/portafolio.photos/landing.png)
-![Imagen 1](./public/portafolio.photos/about.png)
-![Imagen 1](./public/portafolio.photos/about1.png)
-![Imagen 1](./public/portafolio.photos/project.png)
-![Imagen 1](./public/portafolio.photos/card.png)
-![Imagen 1](./public/portafolio.photos/contact.png)
+<img src="./public/portafolio.photos/landing.png" key=1 alt="Imagen 1" width="400" height="200">
+<img src="./public/portafolio.photos/about.png" key=2 alt="Imagen 12" width="400" height="200">
+<img src="./public/portafolio.photos/about1.png" key=3 alt="Imagen 13" width="400" height="200">
+<img src="./public/portafolio.photos/project.png" key=4 alt="Imagen 14" width="400" height="200">
+<img src="./public/portafolio.photos/card.png" key=5 alt="Imagen 15" width="400" height="200">
+<img src="./public/portafolio.photos/contact.png" key=6 alt="Imagen 16" width="400" height="200">

@@ -76,6 +76,7 @@ const Form = () => {
         <form onSubmit={handleOnSubmit}>
           <div className=" mx-14  flex flex-col gap-5 gm:flex-row justify-between  py-5">
             <input
+              autoComplete="true"
               className=" h-12 text-2xl pl-4 bg-letra text-background  rounded-[4px] placeholder:text-background placeholder:font-medium placeholder:px-5"
               required
               type={"text"}
@@ -86,6 +87,7 @@ const Form = () => {
               onChange={handleChange}
             />
             <input
+              autoComplete="true"
               className=" h-12 text-2xl pl-4 bg-letra text-background  rounded-[4px] placeholder:text-background placeholder:font-medium placeholder:px-5"
               required
               type={"email"}

@@ -22,8 +22,8 @@ export default function Projects() {
             </h1>
             <div className="grid gap-x-[20px] gap-y-[20px] grid-cols-1 gm:grid-cols-2">
               {/* <Card openModal={openModal} data={projectData.gusto} /> */}
-              {projectData.map((e) => {
-                return <Card openModal={openModal} data={e} />;
+              {projectData.map((e, index) => {
+                return <Card openModal={openModal} key={index} data={e} />;
               })}
             </div>
           </div>
