@@ -19,7 +19,7 @@ const projectData = [
   {
     image: [landing, recipe, detailC, detail, general, creada],
     description:
-      "Single page aplication hecha con react para el front end y express para el back end, se comunica con un endpoint a la api spoonacular y permite filtar buscar y crear recetas",
+      "SPA (single page app) hecha con React para el front end y express-sequelize-postgreSQL para el back end, se comunica con un endpoint a la api spoonacular y permite filtar buscar y crear recetas",
     title: "Gusto Gourmet",
     github: "https://github.com/Lambda1158/Recipes-App",
   },
@@ -42,7 +42,7 @@ const projectData = [
   {
     image: [landing, recipe, detailC, detail, general, creada],
     description:
-      "Single page aplication hecha con react para el front end y express para el back end, se comunica con un endpoint a la api spoonacular y permite filtar buscar y crear recetas",
+      "SPA (single page app) hecha con React para el front end y express-sequelize-postgreSQL para el back end, se comunica con un endpoint a la api spoonacular y permite filtar buscar y crear recetas",
     title: "Gusto Gourmet",
     github: "https://github.com/Lambda1158/Recipes-App",
   },

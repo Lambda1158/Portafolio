@@ -18,11 +18,12 @@ const Aboutme = () => {
         />
         <div className="mx-8 gm:mx-10 mt-5 gm:mt-0">
           <p className="text-letra font-semibold text-1xl sm:text-2xl">
-            HELLO I‘M BRUNO HERRERA, I PAY GREAT ATTENTION TO DETAIL IN THE
-            DESIGN AND DEVELOPMENT OF THE PROJECTS. MY PLAN IS TO DEVELOP MY
-            TECHNICAL SKILLS TO BECOME PROFICIENT IN NEW TECHNOLOGIES AND STAY
-            CURRENT WITH EMERGING TRENDS IN MY FIELD. YOU CAN CONTACT ME OR
-            REACH OUT TO ME ON MY SOCIALS.
+            HOLA 👋🏼 SOY BRUNO, DISFRUTO MUCHO DEL DESARROLO WEB Y PRESTO MUCHA
+            ATENCION AL DISEÑO Y SOLUCION DE PROBLEMAS EN LOS PROJECTOS MIENTRAS
+            TRATO DE ESTAR AL DIA CON LAS NUEVAS TECNOLOGIAS. MI PLAN ES
+            COMENZAR EN EL RUBRO IT MIENTRAS FINALIZO MIS ESTUDIOS
+            UNIVERSITARIOS. ME PUEDES CONTACTAR EN /CONTACT O EN MIS REDES
+            SOCIALES.
           </p>
           <Link href="/projects">
             <button className="hover:scale-110 transform  inline-block font-semibold tracking-[1px] text-[20px] x text-magenta hover:text-letra uppercase py-4 px-[32px] uppercase]  bg-letra hover:bg-magenta mt-[15px] xl:mt-[30px] transition duration-100">

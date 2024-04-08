@@ -18,8 +18,7 @@ export default function Contacto() {
               👋🏼 Say Hello
             </h1>
             <p className=" py-5 text-2xl font-light decoration-wavy indent-2">
-              If you want to know more about me or my work, send me a message.
-              I&apos;d love to hear from you.
+              Si quieres saber mas de mi no dudes en enviarme un mensaje 😇
             </p>
             <Form />
           </div>
