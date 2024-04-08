@@ -21,10 +21,10 @@ export default function Projects() {
               Learning Projects
             </h1>
             <div className="grid gap-x-[20px] gap-y-[20px] grid-cols-1 gm:grid-cols-2">
-              <Card openModal={openModal} data={projectData.gusto} />
-              <Card openModal={openModal} data={projectData.gusto} />
-              <Card openModal={openModal} data={projectData.gusto} />
-              <Card openModal={openModal} data={projectData.gusto} />
+              {/* <Card openModal={openModal} data={projectData.gusto} /> */}
+              {projectData.map((e) => {
+                return <Card openModal={openModal} data={e} />;
+              })}
             </div>
           </div>
           <Footer />

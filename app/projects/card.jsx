@@ -1,13 +1,11 @@
 import Image from "next/image";
-import Example from "../../public/imagen-muestra.webp";
-import Landing from "../../public/recipes.photos/landing page.png";
 import Boton from "./boton";
 import { FaGithub, FaGlobe } from "react-icons/fa";
 const Card = ({ openModal, data }) => {
   return (
     <>
-      <div className="relative w-[100%]">
-        <Image src={data?.image[0]} alt="alt" />
+      <div className="relative w-[600px]">
+        <Image src={data?.image[0]} alt="alt" width={600} />
 
         <button
           onClick={() => openModal(data)}
@@ -16,7 +14,9 @@ const Card = ({ openModal, data }) => {
           Know More
         </button>
         <div className="absolute top-2 right-2 z-10 ">
-          <Boton Icon={FaGlobe} prop={" right-3"} />
+          <a href={data?.live} target="blank">
+            <Boton Icon={FaGlobe} prop={" right-3"} />
+          </a>
           <a href={data?.github} target="blank">
             <Boton Icon={FaGithub} />
           </a>

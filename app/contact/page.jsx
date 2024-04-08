@@ -7,7 +7,10 @@ import Footer from "../about/footer";
 export default function Contacto() {
   return (
     <Wrapper>
-      <section className="bg-background  min-h-screen " key="/contacto">
+      <section
+        className="bg-background  min-h-screen  max-h-[100%] "
+        key="/contacto"
+      >
         <div className=" mx-auto max-w-[1285px]  px-4 text-letra mb-6 ">
           <Header />
           <div className=" px-5 h-auto">

@@ -32,12 +32,11 @@ const Items = [
   SiHtml5,
   SiCss3,
 ];
-const Items1 = [];
 
 export default function Icons() {
   return (
     <section id="icons" className=" mx-8 sm:mx-0 ">
-      <div className="  flex justify-start items-center flex-wrap gap-[60px]">
+      <div className="  flex justify-start items-center flex-wrap gap-[40px] sm:gap-[60px]">
         {Items.map((Icon, index) => (
           <Icon
             key={index}

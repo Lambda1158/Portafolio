@@ -39,7 +39,9 @@ function Modal1({ isOpen, onClose, data }) {
                   <a href={data.github} target="blank">
                     <Boton Icon={FaGithub} />
                   </a>
-                  <Boton Icon={FaGlobe} prop={"left-5"} />
+                  <a href={data?.live} target="blank">
+                    <Boton Icon={FaGlobe} prop={"left-5"} />
+                  </a>
                 </div>
               </div>
             </div>
