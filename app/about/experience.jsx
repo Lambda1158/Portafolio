@@ -5,7 +5,7 @@ const Experience = () => {
         Experience
       </h1>
       <h3 className=" font-medium py-5 text-3xl sm:text-5xl">
-        Suoes Administrative
+        Suoes Administrativo
       </h3>
       <ol className=" font-medium text-1xl sm:text-3xl">
         Administrative | Precential | Feb 2022 - Mar 2024
