@@ -6,8 +6,8 @@ import Wrapper from "./components/wrapper";
 export default function Home() {
   return (
     <Wrapper>
-      <section key="home" className="bg-background">
-        <div className=" mx-auto max-w-[1285px] px-3 overflow-hidden h-screen">
+      <section key="home" className="bg-background  min-h-screen">
+        <div className=" mx-auto max-w-[1285px] px-3">
           <Header />
           <div className="mx-auto py-10 px-5">
             <TextAnimation>

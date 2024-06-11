@@ -2,7 +2,7 @@ const Experience = () => {
   return (
     <section id="experience-section" className="mx-8 sm:mx-0 text-letra">
       <h1 className="font-semibold text-5xl sm:text-7xl hover:scale-x-95 transform transition-transform duration-300 ease-in-out ">
-        Experience
+        Experiencia
       </h1>
       <h3 className=" font-medium py-5 text-3xl sm:text-5xl">
         Suoes Administrativo
