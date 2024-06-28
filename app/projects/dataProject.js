@@ -22,6 +22,7 @@ const projectData = [
       "SPA (single page app) hecha con React para el front end y express-sequelize-postgreSQL para el back end, se comunica con un endpoint a la api spoonacular y permite filtar buscar y crear recetas",
     title: "Gusto Gourmet",
     github: "https://github.com/Lambda1158/Recipes-App",
+    live: "https://recipes-app-ten-alpha.vercel.app/",
   },
   {
     image: [landing1, menu, about, about1, card, contact, mail, project],
@@ -45,6 +46,7 @@ const projectData = [
       "SPA (single page app) hecha con React para el front end y express-sequelize-postgreSQL para el back end, se comunica con un endpoint a la api spoonacular y permite filtar buscar y crear recetas",
     title: "Gusto Gourmet",
     github: "https://github.com/Lambda1158/Recipes-App",
+    live: "https://recipes-app-ten-alpha.vercel.app/",
   },
 ];
 
