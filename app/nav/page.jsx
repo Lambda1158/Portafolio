@@ -24,7 +24,7 @@ const fa = [
   { name: FaGithub, href: "https://github.com/Lambda1158" },
   {
     name: FaLinkedin,
-    href: "https://www.linkedin.com/in/bruno-herrera-aa10b6201/",
+    href: "https://www.linkedin.com/in/brunoherrera1158/",
   },
   { name: FaTwitter, href: "https://www.twitter.com" },
   {
@@ -51,7 +51,7 @@ export default function NavPage() {
                         text={e.text}
                         value={1.05}
                         tail={
-                          " sm:text-[70px] noSelect text-[55px] leading-[0.9] font-normal hover:font-semibold hover:line-through uppercase inline-block text-letra "
+                          " sm:text-[70px] noSelect text-[55px] leading-[0.9] font-normal hover:font-semibold hover:line-through duration-300 uppercase inline-block text-letra "
                         }
                       />
                     </Link>

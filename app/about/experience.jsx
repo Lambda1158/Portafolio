@@ -1,12 +1,12 @@
 const Experience = () => {
   return (
     <section id="experience-section" className="mx-8 sm:mx-0 text-letra">
-      <h1 className="font-semibold text-5xl sm:text-7xl hover:scale-x-95 transform transition-transform duration-300 ease-in-out ">
+      <h1 className="font-semibold mb-4 text-5xl sm:text-7xl hover:scale-x-95 transform transition-transform duration-300 ease-in-out ">
         Experiencia
       </h1>
       <div>
         <h3 className=" font-medium py-5 text-3xl sm:text-5xl mb-2">
-          Fisiothera (Pasantías)
+		FISIOMFULNESS S.A.C (Contrato de prácticas)
         </h3>
         <h4 className=" text-2xl sm:text-4xl mb-4">
           Fullstack Developer | Remoto | Dic 2024 - Actualidad

@@ -23,6 +23,7 @@ module.exports = {
         lm: "1020px",
         gm: "850px",
         xl: "1280px",
+        xxl: "1366px",
       },
       scale: {
         140: "1.4",

@@ -1,16 +1,11 @@
 "use client";
 import Card from "./card";
 import Header from "../components/header/header";
-import Modal1 from "./modal1";
 import Footer from "../about/footer";
-import { useState } from "react";
 import Wrapper from "../components/wrapper";
 import projectData from "./dataProject";
 
 export default function Projects() {
-  const [isModalOpen, setIsModalOpen] = useState({ state: false, project: {} });
-  const openModal = (e) => setIsModalOpen({ state: true, project: e });
-  const closeModal = () => setIsModalOpen({ state: false, project: {} });
   return (
     <>
       <Wrapper>
@@ -23,18 +18,13 @@ export default function Projects() {
             <div className="grid gap-x-[20px] gap-y-[20px] grid-cols-1 gm:grid-cols-2">
               {/* <Card openModal={openModal} data={projectData.gusto} /> */}
               {projectData.map((e, index) => {
-                return <Card openModal={openModal} key={index} data={e} />;
+                return <Card  key={index} data={e} />;
               })}
             </div>
           </div>
           <Footer />
         </section>
       </Wrapper>
-      <Modal1
-        isOpen={isModalOpen.state}
-        data={isModalOpen.project}
-        onClose={closeModal}
-      />
     </>
   );
 }
