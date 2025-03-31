@@ -443,7 +443,7 @@ const projectData = [
     description:
       'Hi-Talent es un e-commerce inspirado en Mercado Libre, donde los usuarios pueden comprar y vender clases personalizadas. Implementé diversas funcionalidades clave, como gestión de productos, pagos y experiencia de usuario optimizada.',
     title: 'Hi-talent e-comerce',
-    github: 'https://github.com/Lambda1158/Portafolio',
+    github: 'https://github.com/Lambda1158/E-com18',
     live: 'https://portafolio-gamma-sooty.vercel.app/',
     url: 'Hi-talent-e-comerce',
     tech: [
